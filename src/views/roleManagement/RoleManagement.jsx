@@ -62,7 +62,7 @@ const data = [
     }
 ];
 
-class UserManagement extends React.Component {
+class RoleManagement extends React.Component {
     render() {
         return (
             <LeftNav>
@@ -81,4 +81,4 @@ class UserManagement extends React.Component {
     }
 }
 
-export default UserManagement
+export default RoleManagement
