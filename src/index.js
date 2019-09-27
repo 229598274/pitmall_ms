@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 // import App from './App';
 // import Login from './views/login/Login';
 // import Login from './layout/leftnav/LeftNav';
-import Login from './views/home/Home';
+// import Login from './views/home/Home';
+import Login from './views/userManagement/UserManagement';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Login />, document.getElementById('root'));

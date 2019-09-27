@@ -62,7 +62,7 @@ const data = [
     }
 ];
 
-class Home extends React.Component {
+class UserManagement extends React.Component {
     render() {
         return (
             <LeftNav>
@@ -81,4 +81,4 @@ class Home extends React.Component {
     }
 }
 
-export default Home
+export default UserManagement
