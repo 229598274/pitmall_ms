@@ -69,7 +69,7 @@ class UserManagement extends React.Component {
                 <Content style={{ margin: '0 16px' }}>
                     <Breadcrumb style={{ margin: '16px 0' }}>
                         <Breadcrumb.Item>用户管理</Breadcrumb.Item>
-                        <Breadcrumb.Item>用户管理</Breadcrumb.Item>
+
                     </Breadcrumb>
                     <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
                         <SearchBar />
