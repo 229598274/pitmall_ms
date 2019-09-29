@@ -22,7 +22,7 @@ class LeftNav extends React.Component {
           <div className="logo" />
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1">
-              <Icon type="video-camera" />
+              <Icon type="user" />
               <span className="nav-text">用户管理</span>
             </Menu.Item>
             <SubMenu

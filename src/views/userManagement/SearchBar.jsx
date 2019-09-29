@@ -88,7 +88,9 @@ class AdvancedSearchForm extends React.Component {
                     </Col>
                 </Row>}
                 <Form.Item >
-                <Button type="primary" icon="plus">创建</Button>
+                    <Button type="primary" icon="plus">创建</Button>
+                    <Button style={{ marginLeft: 8 }} type="primary">批量停用</Button>
+                    <Button style={{ marginLeft: 8 }} type="primary">批量启用</Button>
                 </Form.Item>
             </Form>
         );

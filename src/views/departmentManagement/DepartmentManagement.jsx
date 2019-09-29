@@ -7,10 +7,9 @@ const { Header, Content, Footer, Sider } = Layout;
 
 const columns = [
     {
-        title: '姓名',
-        dataIndex: 'name',
-        key: 'name',
-        render: text => <a>{text}</a>,
+        title: '部门名称',
+        dataIndex: 'departmentname',
+        key: 'departmentname',
     },
     {
         title: '年龄',
@@ -21,11 +20,6 @@ const columns = [
         title: '电话',
         dataIndex: 'phone',
         key: 'phone',
-    },
-    {
-        title: '部门',
-        dataIndex: 'department',
-        key: 'department',
     },
     {
         title: '职位',
