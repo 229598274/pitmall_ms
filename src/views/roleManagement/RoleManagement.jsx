@@ -65,7 +65,7 @@ const data = [
 class RoleManagement extends React.Component {
     render() {
         return (
-            <LeftNav>
+
                 <Content style={{ margin: '0 16px' }}>
                     <Breadcrumb style={{ margin: '16px 0' }}>
                         <Breadcrumb.Item>权限管理</Breadcrumb.Item>
@@ -76,7 +76,7 @@ class RoleManagement extends React.Component {
                         <Table columns={columns} dataSource={data}/>
                     </div>
                 </Content>
-            </LeftNav>
+    
         )
     }
 }

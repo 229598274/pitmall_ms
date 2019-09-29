@@ -1,14 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import './index.css';
-// import App from './App';
-// import Login from './views/login/Login';
-// import Login from './layout/leftnav/LeftNav';
-// import Login from './views/home/Home';
-import Login from './views/userManagement/UserManagement';
+
+import LeftNav from './layout/leftnav/LeftNav';
+// import Router from  './Router';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Login />, document.getElementById('root'));
+ReactDOM.render(<LeftNav />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
