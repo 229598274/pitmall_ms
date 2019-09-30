@@ -2,10 +2,10 @@ import React from 'react';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
-import UserManagement from '../../views/userManagement/UserManagement';
-import AuthorityManagement from '../../views/authorityManagement/AuthorityManagement';
-import DepartmentManagement from '../../views/departmentManagement/DepartmentManagement';
-import RoleManagement from '../../views/roleManagement/RoleManagement';
+import UserManagement from '../../views/user/User';
+import AuthorityManagement from '../../views/authority/Authority';
+import DepartmentManagement from '../../views/department/Department';
+import RoleManagement from '../../views/role/Role';
 import Home from '../../views/home/Home';
 
 import './leftnav.css';
@@ -31,7 +31,7 @@ class LeftNav extends React.Component {
           <Layout style={{ minHeight: '100vh' }}>
             <Sider collapsible collapsed={this.state.collapsed} width='240' onCollapse={this.onCollapse}>
               <div className="logo" />
-              <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
+              <Menu theme="dark" defaultSelectedKeys={['0']} mode="inline">
                 <Menu.Item key="0">
                   <Link to="/" >
                     <Icon type="home" />
