@@ -1,10 +1,15 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import './login.css';
-import { Form, Icon, Input, Button, Checkbox,Tabs,Row, Col } from 'antd';
+import { Form, Icon, Input, Button, Checkbox, Tabs, Row, Col } from 'antd';
+import { connect } from 'react-redux'
+import reduxActions from '../../reduxActions'
+
 const TabPane = Tabs.TabPane;
 
 class NormalLoginForm extends React.Component {
+
+
     handleSubmit = e => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
@@ -15,11 +20,12 @@ class NormalLoginForm extends React.Component {
     };
 
     render() {
-        const { getFieldDecorator } = this.props.form;
+        console.log('props', this.props)
+        const { form: { getFieldDecorator }, login, getHello } = this.props;
         return (
             <Form onSubmit={this.handleSubmit} layout='horizontal' className="login-form">
                 <Form.Item>
-                    {getFieldDecorator('username', {
+                    {/*   {getFieldDecorator('username', {
                         rules: [{ required: true, message: 'Please input your username!' }],
                     })(
                         <Input
@@ -44,8 +50,9 @@ class NormalLoginForm extends React.Component {
                         valuePropName: 'checked',
                         initialValue: true,
                     })(<Checkbox>记住我</Checkbox>)}
-                    <a className="login-form-forgot" href="">忘记密码</a>
-                    <Button type="primary" htmlType="submit" className="login-form-button">登录</Button>
+                    <a className="login-form-forgot" href="">忘记密码</a> */}
+                    <Button type="primary" htmlType="submit" onClick={login} className="login-form-button">login</Button>
+                    <Button type="primary" htmlType="submit" onClick={getHello} className="login-form-button">getHello</Button>
                 </Form.Item>
             </Form>
         );
@@ -54,5 +61,22 @@ class NormalLoginForm extends React.Component {
 
 const Login = Form.create({ name: 'normal_login' })(NormalLoginForm);
 
-export default Login;
+
+const mapStateToProps = (state) => {
+    return {
+        loginReducer: state.loginReducer
+    }
+}
+
+const mapDispatchToProps = (dispatch) => ({
+    login: () => {
+        dispatch(reduxActions.loginActions.login())
+    },
+    getHello: () => {
+        dispatch(reduxActions.loginActions.getHello())
+    }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login)
+
 

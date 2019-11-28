@@ -7,6 +7,7 @@ import Authority from '../../views/authority/Authority';
 import Department from '../../views/department/Department';
 import Role from '../../views/role/Role';
 import Home from '../../views/home/Home';
+import Login from '../../views/login/Login';
 import Authorize from '../../views/authorize/Authorize';
 
 import './leftnav.css';
@@ -37,6 +38,12 @@ class LeftNav extends React.Component {
                   <Link to="/" >
                     <Icon type="home" />
                     <span className="nav-text">首页</span>
+                  </Link>
+                </Menu.Item>
+                <Menu.Item key="9">
+                  <Link to="/Login" >
+                    <Icon type="user" />
+                    <span className="nav-text">登陆</span>
                   </Link>
                 </Menu.Item>
                 <Menu.Item key="1">
@@ -80,6 +87,7 @@ class LeftNav extends React.Component {
             <Layout>
               <Header style={{ background: '#fff', padding: 0 }} />
               <Route path="/" exact component={Home} />
+              <Route path="/login" exact component={Login} />
               <Route path="/user" component={User} />
               <Route path="/role" component={Role} />
               <Route path="/department" component={Department} />
